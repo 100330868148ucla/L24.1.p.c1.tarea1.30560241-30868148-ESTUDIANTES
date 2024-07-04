@@ -1,8 +1,8 @@
 export default class Cl_DCYT {
     constructor() {
         this.cntEstud = 0;
-        this.nTotal = 0; // Inicializa la suma total en 0
-        this.contEstudFemeninasAprobadas = -1; // Contador de estudiantes femeninas con nota mayor a 48
+        this.nTotal = 0; 
+        this.contEstudFemeninasAprobadas = -1;
         this.mayorNota = -Infinity;
     }
 
@@ -14,7 +14,6 @@ export default class Cl_DCYT {
             this.mayorNota = notaTotal;
         }
         
-        // Verificamos si el estudiante es femenino y su nota es mayor a 48
         if (estudiante.Sexo === "F" && notaTotal > 48) {
             this.contEstudFemeninasAprobadas++;
         }

@@ -16,8 +16,8 @@
  * Promedio de notas 54.25
  * */
 
-import Cl_DCYT from "./Cl_DCYT.js"; // Asegúrate de la ruta correcta
-import Cl_Estudiante from "./Cl_Estudiante.js";  // Asegúrate de la ruta correcta
+import Cl_DCYT from "./Cl_DCYT.js"; 
+import Cl_Estudiante from "./Cl_Estudiante.js"; 
 
 let Estudiante1 = new Cl_Estudiante(13457856, 'M', 15, 20, 25);
 let Estudiante2 = new Cl_Estudiante(15432551, 'F', 10, 10, 10);
@@ -30,7 +30,7 @@ notasParcial.ProcesadordeNotaTotal(Estudiante2);
 notasParcial.ProcesadordeNotaTotal(Estudiante3);
 notasParcial.ProcesadordeNotaTotal(Estudiante4);
 
-// Mostrar los resultados en el elemento con id="Salida"
+
 const salida = document.getElementById("Salida");
 salida.innerHTML = `
     El estudiante con cedula ${Estudiante1.CI} obtuvo una nota total de ${notasParcial.ProcesadordeNotaTotal(Estudiante1)}<br>
