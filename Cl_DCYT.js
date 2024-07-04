@@ -2,9 +2,7 @@ export default class Cl_DCYT {
     constructor() {
         this.cntEstud = 0;
         this.nTotal = 0; // Inicializa la suma total en 0
-        this.contEstud = 0;
-        this.contEstudFemeninas = 0; // Contador de estudiantes femeninas
-        this.contEstudFemeninasAprobadas = 0; // Contador de estudiantes femeninas con nota mayor a 48
+        this.contEstudFemeninasAprobadas = -1; // Contador de estudiantes femeninas con nota mayor a 48
         this.mayorNota = -Infinity;
     }
 
@@ -15,12 +13,12 @@ export default class Cl_DCYT {
         if (notaTotal > this.mayorNota) {
             this.mayorNota = notaTotal;
         }
-        if (estudiante.Sexo == 'F') {
-            this.contEstudFemeninas++; // Incrementa el contador de estudiantes femeninas
-            if (notaTotal >= 48) {
-                this.contEstudFemeninasAprobadas++; // Incrementa el contador de estudiantes femeninas con nota mayor a 48
-            }
+        
+        // Verificamos si el estudiante es femenino y su nota es mayor a 48
+        if (estudiante.Sexo === "F" && notaTotal > 48) {
+            this.contEstudFemeninasAprobadas++;
         }
+      
         return notaTotal;
     }
 
